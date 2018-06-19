@@ -1,0 +1,160 @@
+\section{The Commercial Opportunity}
+\label{sec:opportunity}
+
+%Recommended length: 2-4 pages.
+%\begin{itemize}
+%\item Is there a broader societal need you are trying to address with this commercial opportunity? Please describe.
+%\item Describe the market and addressable market for the innovation. Discuss the business economics and market drivers in the target industry.
+%\item How has the market opportunity been validated? Describe your customers and your basic business model.
+%\item Describe the competition. How do you expect the competitive landscape may change by the time your product/service enters the market?
+%\item What are the key risks in bringing your innovation to market?
+%\item Describe your commercialization approach. Discuss the potential economic benefits associated with your innovation, and provide estimates of the revenue potential, detailing your underlying assumptions.
+%\item Describe the resources you expect will be needed to implement your commercialization approach.
+%\item Describe your plan and expected timeline to secure these resources.
+%\end{itemize}
+%
+%\noindent
+%--End of instructions--
+
+Data from IoT devices are growing at prolific rates, and the privacy concerns
+associated with that data are growing equally fast.  Who owns the data, who
+should have access to the data, who controls access to the data, how can
+the data benefit the greater good, all of these are questions that currently
+do not have settled answers.  We are interested in pursuing a scenario
+where data owners are willing to share their data to enable some greater
+good, with some reasonable privacy assurances provided to those data owners.
+
+The specific market that is the focus of this proposal is aquatics, or
+water chemistry control. BECS currently provides control equipment in
+the aquatics market, which includes a number of (mostly distinct)
+market segments (e.g., pools, including municipal pools, commercial
+pools, water parks, health clubs, animal habitats in zoos, residential pools;
+drinking water treatment facilities; waste water treatment facilities;
+fountains; building cooling towers; irrigation water; and
+various commercial operations, including washing vegetables, fracking; etc.).
+BECS also provides control equipment in the
+agriculture and refrigeration markets (primarily livestock feeder controls
+in agriculture and valve controls in refrigeration).
+While the SBIR-funded effort will focus on our aquatics control line;
+if technically successful, we anticipate expanding it to agriculture
+and refrigeration also.
+
+BECS has recently introduced EZAnalytics\texttrademark{}, which enables
+individual owners/operators of its aquatics equipment to collect data
+logs and retain them in the cloud~\cite{ccgss17}.
+These logs include sensor readings (pH, oxidation-reduction potential, free Cl
+concentration, temperature, etc.), alarms (readings out of range, etc.),
+user actions (e.g., set-point changes, etc.), and feed chemical inventories.
+These data are quite valuable for compliance verification, diagnostics,
+and the like.  Since the number of bodies of water administered by each
+organization is small, however, greater insights that can be revealed
+by aggregating across ownership boundaries are, as yet, still unavailable.
+Our intention is to develop a set of privacy preserving mechanisms that allow
+the aquatics community as a whole to learn a number of things from these
+data.
+\begin{itemize}
+\item The effectiveness of control decisions.  How well do different approaches
+maintain water chemistry?
+\item How to recommend better control approaches. How well will control
+approaches that are effective in one body of water transfer to another?
+\item How to minimize chemical usage. Can we make water chemistry control
+more cost effective by decreasing the consumables needed?
+\item How to detect problems. Alarm conditions are problematic for multiple
+reasons.  Keeping them from happening at all is almost always the best option.
+\end{itemize}
+The above knowledge brings direct value to the end users of BECS's equipment.
+
+BECS sells controllers (and related equipment) through over 20
+distributors that each have exclusive coverage in a geographic region
+(typically one or more states).
+International sales are supported by distributors in Canada,
+the UK (for Europe), and Australia (for Asia and the Pacific rim),
+while coverage in Latin America is provided by our distributor in the
+Florida region.
+
+For new product introductions, we typically follow an annual cycle,
+centered around the fall sales meeting, which is attended by virtually
+all of our distributors.  What we are hearing from our distributors
+is that they appreciate the gradual transition from ``selling equipment''
+to ``improving water chemistry as a service'' (see discussion in
+Section~\ref{sec:team} and attached letters of support).
+Currently, the service that BECS provides is entirely supported via
+equipment sales.  However, we anticipate transitioning to include a
+subscription model (as we have already done in the agriculture market).
+
+BECS is seen as a leader in the aquatics market segments it actively pursues
+(primarily pools, fountains) and is a fairly small player in other
+aquatics market segments.  Our aspiration is to expand into other market
+segments, and we believe the proposed research will enable us to move
+in that direction.
+
+Probably the largest market risk we face is the development of a strong
+subscription-based revenue stream.  Technical success in the proposed
+research will undoubtedly be accompanied by an increase in equipment sales;
+especially if it enables us to penetrate some of the other aquatics
+market segments.  Probably more important, from a risk perspective,
+is moving to a
+market positioning based on a combination of equipment sales and
+water quality service will depend upon the development of recurring
+revenue for the service provided.
+
+In the aquatics market, we will pursue a similar approach to that which
+we have already initiated in agriculture. First, we simplify the process
+for end users. Some of the ways we do this include:
+(1)~make installation straightforward,
+(2)~proactively deal with communications or control issues so end users are not
+inconvenienced,
+(3)~provide information to end users in clear and useful ways.
+Note, this latter item is a significant motivator for the visualization
+research that is a significant part of the proposed work.
+
+Second, we ensure that the economic model for the customer is appropriate.
+When we can make a convincing argument that the customer's cost savings
+(e.g., in reduced consumables, reduced maintenance, etc.) is greater than
+the cost of the subscription, the ROI is practically instantaneous.
+
+In some aquatics market segments, market penetration is strongly a function
+of cost of the equipment.  An example of this is building cooling towers.
+A cooling tower controller is typically asked to perform simple water
+chemistry control, and relinquish all higher-level decisions to a
+building management system. The historical limitation of this approach
+for BECS is that, since our revenue stream has been based exclusively
+on equipment sales, there is limited opportunity for revenue growth.
+
+Success with the proposed SBIR project could change that situation
+substantially.  The subscription-based revenue model could be quite
+beneficial, in that inexpensive on-site equipment, tied to a building
+management system, can provide time series data on the water chemistry.
+The economic argument for subscribing to a privacy-preserving aggregated
+data set is then based on reducing operating costs by some amount
+greater than the subscription fee.
+Our primary focus is water chemistry, which is quite distinct from 
+that of traditional
+building management systems, so we have a credible claim that the service
+we are providing isn't already present.
+While we are unlikely to quantitatively
+be able to make this argument until sometime during Phase~II, this is
+precisely the direction we hope to go.
+
+While how well the new technology will enable us to penetrate new
+market segments is difficult to predict, a simple computation can provide
+an estimate of recurring revenue from a subscription model in the
+market segments we currently serve.
+Annually, BECS ships approximately 2000 control systems that are
+eligible for participation in a subscription data service, and the
+typical lifetime of a controller is on the order of 10 years.  This gives
+a controller population (based on the currently served market segments) of
+about 20,000.  If approximately half of those subscribed, and the subscription
+fee were to be \$20/month, this yields an annual revenue of
+$(20,000)\cdot(0.5)\cdot(\$20/\mbox{month})\cdot(12\mbox{ months/yr}) = \$2.4$~million.
+Clearly, that would go up as controller sales increase (particularly with
+new market segments), and would be less if the fraction subscribing
+were lower.
+
+To fully succeed in our vision, we must both deliver quality service
+and effectively market and sell subscriptions to the services we
+deliver.  The proposed SBIR project will help substantially in achieving
+the former (even though the initial development of EZAnalytics\texttrademark{}
+has been internally funded), and the latter will depend upon traditional
+marketing and sales efforts (which are already ongoing in the aquatics
+market, funded via equipment sales).

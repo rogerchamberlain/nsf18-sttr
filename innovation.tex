@@ -1,0 +1,147 @@
+\section{The Innovation}
+\label{sec:innovation}
+
+%Recommended length: 1-3 pages.
+%\begin{itemize}
+%\item Briefly describe the innovation. At what stage of technical development is the innovation? (A more detailed description can be provided in the Technical Discussion and R\&D Plan, as described below).
+%\item Describe the key technical challenges and risks in bringing the innovation to market. Which of these will be your focus in the proposed Phase I project?
+%\item Describe the status of the intellectual property associated with this project and how you plan to protect it.
+%\item NSF Lineage: Does your project have roots in non-SBIR/STTR NSF funding, either to the company or other organizations/institutions? If possible, please list the NSF award number(s) and division(s).
+%\end{itemize}
+%
+%\noindent
+%--End of instructions--
+
+Dating back to the 1990s, BECS has always provided remote connectivity
+to its aquatics equipment.  The current editions provide for both
+security and ease-of-use~\cite{ccgss16,ccgss17b}, yet the data model
+is that owners/operators of the control equipment only have access to
+data from their own controllers.
+A number of benefits accrue from access to this ``owned-only'' data,
+including:
+\begin{enumerate}
+\item verifying compliance to regulations for the appropriate
+governmental authorities,
+\item remote notification of anomalous or alarm conditions,
+\item maintaining stocks of chemical consumables at appropriate levels, and
+\item diagnosing and correcting many water chemistry problems without
+having to be on-site.
+\end{enumerate}
+
+The innovation we wish to pursue in this work is to enable
+the \emph{additional} benefits that can accrue from aggregating data
+across organizational boundaries.
+One of the lessons of the recent explosion in the utility of machine
+learning techniques is that (at least to first order) they are more
+effective when you give them more data.  This need for enough data is
+also true for learning by humans as well.  When we are trying to discern
+general properties of a system under study, having examples that
+illuminate a wide range of the operating range is crucial.
+
+In our particular focus area (water chemistry), individual operators are
+typically responsible for somewhere between one and ten separate bodies
+of water.  These numbers are simply insufficient to learn general truths
+about water chemistry control, certainly not truths that we don't already
+know from theory (e.g., add acid and the
+pH goes down in a very predictable way).
+The application-specific things we want to learn are more likely to
+be empirically driven (e.g,. when the backwash is engaged to clean the
+filter, does that tend to increase or decrease pH levels).  
+A reasonable (if not perfect) analogy is the following, we are trying
+to use data to learn the kinds of things commonly known by a 
+veteran operator with years of experience.
+
+The benefits of data that cross organizational boundaries are particularly
+strong when the operational characteristics of different bodies of
+water are distinct from one another.  A simple example of this is
+volume, a 1000~gallon body of water acts differently than a 1~million
+gallon body of water.  In a facility that has one of each (and this
+is quite common), what an operator learns from one body of water often
+isn't that useful for the other body of water.  On the other hand, if
+he/she can learn from data collected about 1000~gallon systems from
+many organizations, and similarly from data collected about 1~million
+gallon systems from many organizations, what is learned is much more
+likely to be of direct benefit.
+
+There are two fundamental questions that must be solved for the
+vision articulated above to become reality.
+\begin{itemize}
+\item[(1)] We must gather the
+data under circumstances that allow its use for our intended purpose
+(explicitly addressing the privacy concerns of the data owners), and
+\item[(2)] we must use the aggregated data to learn lessons about water
+treatment control.
+\end{itemize}
+
+This Phase I proposal will focus almost exclusively on question~(1);
+specifically, how to effectively preserve the privacy of the owners
+of the data so that they are willing to contribute it for community
+use in the first place.
+While we will touch on question~(2) during the Phase~I project, it will
+be limited in scope, with the bulk of the work needed to address question~(2)
+being deferred to Phase~II.
+
+We have chosen to address question~(1) initially, followed by question~(2)
+for the following reasons:
+\begin{itemize}
+\item Success with~(1) is generalizable to a much wider set of circumstances.
+If we are ultimately unsuccessful with question~(2) in the field of water
+chemistry, we can still export our Phase~I results to other markets.
+\item The answers to question~(1) will impact the techniques we use in
+investigating question~(2). Differential privacy (our preferred approach)
+adds uncertainty to queries on the aggregated data. How much uncertainty, at
+what expense in ``privacy budget,'' must be known before we can effectively
+quantitatively evaluate what we can learn from the data.
+\end{itemize}
+
+Ultimately, we are working toward an integrated system that allows clients to explore this aggregated data.
+Having access to the data is only half the solution. 
+The data must also be presented in an intuitive manner to facilitate ease of exploration and ease of decision-making. 
+To this end, we will employ state-of-the-art visualization techniques for communicating time series data to clients. 
+
+During Phase~I, we will focus on the following two components of this
+system:
+\begin{enumerate}
+\item Development of an infrastructure that aggregates water chemistry
+data into the cloud, supports queries against this data, and responds to
+these queries with added noise guided by differential privacy theory.
+At various levels of privacy budget (more specifically,
+$\epsilon$ and $\delta$), assess the resulting uncertainty inherent
+in the query responses provided.
+\item Exploration and evaluation of appropriate visualizations of data that have been
+anonymized using differential privacy theory.  With a focus on end users,
+the goal is to communicate both the information inherent in the data as well
+as uncertainty in the data.
+\end{enumerate}
+We articulate how we will judge success (or failure) of the Phase~I effort
+in Section~\ref{sec:research}.
+
+Privacy theory has a rich history of NSF support; however, we should point
+out that neither the PI nor Senior Personnel have made
+contributions to that theory.  We are, however, consulting with an expert.
+Our strength is
+transition of theory to practice, as evidenced by our work in
+auto-calibration of capacitive level sensors~\cite{lc03}
+and proximity detectors~\cite{prox},
+deadlock detection and avoidance in streaming data computations~\cite{labcl10},
+applying state-of-the-art security to IoT devices~\cite{ccgss16,ccgss17b},
+and developing flowing-water titration mechanisms that are effective
+for recirculating systems~\cite{cesw17}.
+
+As long as the literature describing the theory is clear (which is certainly
+the case for privacy theory), in our past experience any remaining questions
+are readily addressed by a query to an expert (often the author of the
+paper in question).
+The lead author of two of the papers that developed the theory of interest
+in this proposal~\cite{fx12,fx14}
+is Dr.~Liyue Fan, Asst.~Professor in the Dept. of Information
+Security and Digital Forensics at the University at Albany (SUNY).
+She has agreed to consult with us, and provide answers to the very queries
+we mention above.
+
+As indicated by the fact that 3 of the above 5 reduction to practice
+examples are documented
+via patents or patent applications, it is often the case that reducing
+theory to practice results in inventive steps, and BECS regularly pursues
+patent protection for technologies that it develops.  This project will
+be no exception.

@@ -1,0 +1,135 @@
+\centerline{\Large Practical Privacy in the Internet-of-Things}
+
+\paragraph{Introduction}
+\label{sec:intro}
+
+A number of high-profile examples~\cite{bz06,bk07} have illustrated
+the difficulty inherent in maintaining the privacy of individuals
+whose data are shared, even when anonymized.
+Differential privacy~\cite{dwork11,dr14} provides a formal
+framework for ensuring bounds on data leaks about individuals; however,
+there are a number of questions that remain about its use in practical
+settings.  These include the choice of appropriate privacy budget,
+$\epsilon$, $\delta$, and utility.
+
+We propose to empirically evaluate the suitability of differential
+privacy techniques in data collected from the Internet-of-Things (IoT).
+\emph{Can we effectively parametrize the use of differential privacy techniques
+(possibly in combination with other techniques, such as
+$k$-anonymity~\cite{samarati01,sweeney02},
+$l$-diversity~\cite{mkgv07}, etc.)
+while enabling meaningful conclusions to be drawn from the data?}
+
+Our Phase~I investigation will restrict its focus to the aquatics market,
+and we will expand into agriculture and possibly refrigeration during
+Phase~II. Each of these markets is one in which we currently provide
+equipment.
+
+\paragraph{Company and Team}
+\label{sec:team}
+
+BECS Technology, Inc., (BECS) is a small business that provides
+control equipment in
+a number of markets (agriculture, aquatics, refrigeration, etc.).
+In the modern era, that implies communicating with the equipment via
+networks, placing the controllers that BECS manufactures squarely in
+the Internet-of-Things (IoT).
+BECS takes the security of its systems seriously, providing multiple
+layers of state-of-the-art security mechanisms on the
+equipment that it manufactures, while at the same time supporting
+ease-of-use on the part of the equipment owners and installers~\cite{ccgss16}.
+Organized in 1991, BECS is privately held and employs approximately 100
+people. It has outgrown its current
+manufacturing facility of 24,000 sq.~ft.\ so is in the process of
+renovating and moving into a new 42,000 sq.~ft.\ facility.
+
+The design engineering team at BECS is comprised of 10 individuals, of
+which Todd Steinbrueck is the software team lead (who will serve as
+PI on the SBIR grant) and Roger Chamberlain is the VP Engineering (who
+will serve as senior personnel on the SBIR grant).  Roger Chamberlain
+also is Professor of Computer Science and Engineering at Washington
+University in St.~Louis.
+While bringing over 25 years of research experience to bear on the problem
+at hand, Dr.~Chamberlain will be serving in his capacity as VP Engineering
+at BECS and will maintain strict compliance with the conflict-of-commitment
+rules at the the university.
+
+\paragraph{Market Opportunity}
+\label{sec:market}
+
+BECS has recently introduced EZAnalytics\texttrademark{}, which enables
+individual owners/operators of its aquatics equipment to collect data
+logs and retain them in the cloud~\cite{ccgss17}.
+These logs include sensor readings (pH, oxidation-reduction potential, free Cl
+concentration, temperature, etc.), alarms (readings out of range, etc.),
+user actions (e.g., set-point changes, etc.), and feed chemical inventories.
+These data are quite valuable for compliance verification, diagnostics,
+and the like.  Since the number of bodies of water administered by each
+organization is small, however, greater insights that can be revealed
+by aggregating across ownership boundaries are, as yet, still unavailable.
+Our intention is to develop a set of privacy preserving mechanisms that allow
+the aquatics community as a whole to learn a number of things from these
+data.
+\begin{itemize}
+\item The effectiveness of control decisions.  How well do different approaches
+maintain water chemistry?
+\item How to recommend better control approaches. How well will control
+approaches that are effective in one body of water transfer to another?
+\item How to minimize chemical usage. Can we make water chemistry control
+more cost effective by decreasing the consumables needed?
+\item How to detect problems. Alarm conditions are problematic for multiple
+reasons.  Keeping them from happening at all is almost always the best option.
+\end{itemize}
+The above knowledge brings direct value to the end users of BECS's equipment.
+
+\paragraph{Core Technology and Innovation}
+\label{sec:tech}
+
+While the above knowledge will benefit the entire aquatics community, it relies
+on owners/operators of the equipment sharing their private data with the
+community.  For this to happen, it is essential that their privacy be ensured.
+
+What we propose to investigate in this SBIR project is how to transition
+the theory of differential privacy~\cite{dwork11,dr14} into effective
+practice on IoT data.  Differential privacy provides strong guarantees
+that no incremental harm comes to an individual (or, in our case, organization)
+if they are willing to share their private data into a common database
+maintained by a trusted curator. Statistical queries to that database
+have added noise included in query responses so that privacy is preserved.
+
+The theory is robust and quite strong.  What remains is transition into
+practice, and there are a number of interesting questions that we intend
+to address as part of this investigation.
+\begin{itemize}
+\item Differential privacy's theory depends upon appropriate tuning of a number
+of parameters (e.g., $\epsilon$, $\delta$).  How the privacy budget impacts
+utility is not well understood.  We will investigate this relationship empirically.
+\item How do we communicate the privacy that is effectively provided by differential privacy theory to users?
+\item How do we combine the use of differential privacy with alternative
+approaches~\cite{ct13}, such as $k$-anonymity~\cite{samarati01,sweeney02} and
+$l$-diversity~\cite{mkgv07}?
+\end{itemize}
+BECS will serve as the trusted curator of the database (it is already serving
+that role, providing segregated access to owners/operators of their own data).
+We will investigate how previous privacy-preserving machine learning
+experience~\cite{acgmmtz16,ss15} translates into the space of IoT data.
+
+\paragraph{Competition}
+\label{sec:competition}
+
+There certainly are other companies that provide control equipment in
+each of the markets BECS serves, and providing remote communications
+capabilities to that equipment is essential in the modern era.  As is
+true for much of the IoT, however, BECS's competitors appear to be
+late to the game in terms of ensuring strong security infrastructure.
+
+We are unaware of any efforts towards enabling privacy-preserving
+data analysis in the markets we serve.
+
+\paragraph{Conclusions}
+\label{sec:conclude}
+
+The theory for how to provide privacy-preserving shared data is robust.
+We at BECS Technology would like to apply that theory to the real world
+of IoT data.  We will start with aquatics data, and generalize subsequently
+to agricultural data and refrigeration data.
