@@ -307,17 +307,40 @@ mechanisms, while not as strong as differential privacy from a
 theoretical perspective, are still quite valuable in practice.
 Just as we cannot prove perfect security, and therefore rely on multiple
 tiers of security apparatus, we can also exploit a similar approach
-to data privacy.  We will investigate a multi-tiered approach to data
-privacy that has, as its baseline, differential privacy.  However,
-the privacy budget will be set so as to ensure utility of the released
-data.  This data will then undergo additional anonymization, such as
-$k$-anonymity~\cite{samarati01,sweeney02}
-and/or $l$-diversity~\cite{mkgv07} so as to further
-obfuscate the individual data owner's identity.
-Clearly, this will complicate the quantitative evaluation of the
-privacy versus utility tradeoff. In this case, we will evaluate what we
-can.  At the very least, since we will have access to ground truth in
-the data, a quantitative evaluation of utility will still be possible.
+to data privacy.  
+We will investigate a multi-tiered approach to data
+privacy that has differential privacy at its core, but leverages the
+additional concepts of \emph{suppression} and \emph{generalization}
+which are commonly used means to transform data to comply with
+$k$-anonymity and/or $l$-diversity criteria~\cite{mkgv07}.
+%, as its baseline, differential privacy.  
+Specifically, in our setting suppression would entail removing time
+series contributions from a (small) subset of organizations, whereas
+generalization would determine the level of discretization of time in
+the time series.
+We will use these techniques to preprocess the dataset
+before applying the algorithms for making the resulting data
+differentially private.
+The key intuition for this approach is that suppression would serve to
+reduce global sensitivity of the queries by removing organizations that are
+particularly identifiable in the dataset (e.g., those which are highly
+unusual).
+Similarly, using a coarser time series data would reduce the amount of
+noise necessary to make it differentially private, at the cost of utility loss
+of removing fine-grained information.
+We conjecture that the combined approaches provide us with sufficient
+leverage to allow for optimal balancing between utility and privacy.
+
+%However,
+%the privacy budget will be set so as to ensure utility of the released
+%data.  This data will then undergo additional anonymization, such as
+%$k$-anonymity~\cite{samarati01,sweeney02}
+%and/or $l$-diversity~\cite{mkgv07} so as to further
+%obfuscate the individual data owner's identity.
+%Clearly, this will complicate the quantitative evaluation of the
+%privacy versus utility tradeoff. In this case, we will evaluate what we
+%can.  At the very least, since we will have access to ground truth in
+%the data, a quantitative evaluation of utility will still be possible.
 
 \paragraph{Evaluating Outcomes}
 For most of our experimental results, the outcomes of an experiment
