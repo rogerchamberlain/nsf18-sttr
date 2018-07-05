@@ -372,31 +372,51 @@ the tradeoffs.
 
 \subsubsection{R2: Client Visualization}
 
-\begin{figure}[t]
+\begin{figure*}[t!]
 	\centering
-	\includegraphics[width=1.0\columnwidth]{uncertainty}
-	\caption{Uncertainty visualization techniques for exploring time series data. Image from Sanyal et al.~\cite{sanyal2009user}.}
+	\begin{subfigure}[t]{.3\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{images/ensemble}
+		\caption{Line ensembles}
+	\end{subfigure}%
+	~ 
+	\begin{subfigure}[t]{.3\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{images/errorbars}
+		\caption{Line with error bars}
+	\end{subfigure}
+	~ 
+	\begin{subfigure}[t]{.3\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{images/hops}
+		\caption{Hypothetical outcome plots}
+	\end{subfigure}
+	\caption{We will evaluate visualization techniques for representing uncertainty with time series data. The existed methods include: (a) Line ensembles, (b) error bars, and (c) hypothetical outcome plots~\cite{hullman2015hypothetical}  (an animation that randomly draws from the distribution of possible outcomes.) }
 	\label{fig:uncertainty}
-\end{figure}
+\end{figure*}
 
-While aggregating customer data in a privacy-preserving manner is a strength of our proposed work, we observe that a tailored visualization is necessary to provide an intuitive analysis environment to our clients. 
-A significant consideration in designing this visualization interface is the ability to communicate uncertainty associated with the aggregated data. 
-In this portion of the project, we propose to explore techniques for visualizing uncertainty in time series data and demonstrate their usability.
 
-Figure~\ref{fig:uncertainty} shows examples of existing designs for communicating data uncertainty.
-Researchers have proposed several designs ~\cite{brodlie2012review,sanyal2009user,sanyal2010noodles,spiegelhalter2011visualizing} but few have been tested and usually with unrepresentative populations.  
-To determine which technique is best for communicating uncertainty, we will rigorously examine existing methods. 
-These include scaling the size of visual elements (Figure ~\ref{fig:uncertainty}a), using color to encode the degree of uncertainty (Figure ~\ref{fig:uncertainty}b), using transparency or blurring (Figure ~\ref{fig:uncertainty}c), and using standard error bars (Figure ~\ref{fig:uncertainty}d). 
+Communicating uncertainty is one of the greatest challenges we face today.
+It impacts many data-driven communities such as climate science~\cite{brodlie2012review,pothkow2011probabilistic,potter2009ensemble,spiegelhalter2011visualizing}, business~\cite{griethe2005visualizing,rodriguez2010toward} and medicine~\cite{han2011varieties,han2011communication,kniss2005statistically,lundstrom2007uncertainty,politi2007communicating,prassni2010uncertainty,spiegelhalter2011visualizing}. 
+Visualization has been widely successful in helping people explore, reason, and make judgments with data, and prior work suggests that it may be key for improving comprehension of probability and uncertainty~\cite{correll2014error,brodlie2012review,pothkow2011probabilistic,sanyal2009user,sanyal2010noodles,spiegelhalter2011visualizing}. Researchers have proposed several designs including line ensembles~\cite{potter2009ensemble,sanyal2010noodles}, error bars~\cite{correll2014error}, gradient plots~\cite{correll2014error,han2011communication,jackson2008displaying,tak2014perception} and violin plots~\cite{correll2014error,hintze1998violin,kampstra2008beanplot}. 
+More recently, Hullman et al. introduced the hypothetical outcome plot which is an animated chart that randomly draws from the distribution of possible outcomes~\cite{hullman2015hypothetical}. 
 
-%\paragraph{Exploring and evaluating techniques for communicating uncertainty to non-experts}
-In this phase of the project, \emph{we will explore and evaluate methods for communicating uncertainty to non-experts}.
-We plan first to test the designs using fictitious data with a diverse population of study participants via Amazon's Mechanical Turk. 
+One advantage of visualization is that it can make complex or abstract concepts easier to grasp by making them visible. In theory, an effective visual representation can make traditionally difficult problems more concrete and easier to understand. 
+In practice, however, nuanced contextual factors heavily impact the effectiveness of visualizations, making the right representation difficult to establish.
+While many designs exist, it is not clear whether these methods effective communicate uncertainty and support decision-making in real-world tasks.
+Many open questions remain. For instance: \textit{Which visualizations best communicates data with uncertainty}? and \textit{How do
+visualizations impact decision-making?}
+
+In this phase of the project, we will explore and evaluate methods for communicating uncertainty to non-experts.
+To identify the best techniques, we will rigorously examine existing methods. 
+These include using line ensembles (Figure ~\ref{fig:uncertainty}a), using standard error bars (Figure ~\ref{fig:uncertainty}b), using animation (Figure ~\ref{fig:uncertainty}c), as well as other techniques that leveraging visual variables (e.g., scaling the size of visual elements, using color to encode the degree of uncertainty, and using transparency or blurring). 
+We plan first to test the designs with a diverse population of study participants via Amazon's Mechanical Turk. 
 Once we have some candidate visualizations, we will expand these results by testing real aggregated data with clients in their natural work environments.
 Dr. Ottley and her team have extensive experience in evaluating systems.
 Here we outline the steps we will take to evaluate the different designs.   
 
 \paragraph{Comparing Designs} 
-Our goal here is to rank visualization designs based how effective they are at conveying meaningful information and facilitating decision-making.  
+Our goal here is to determine the most effective visualization design for conveying meaningful information and for facilitating decision-making.  
 We will conduct experiments via Amazon's Mechanical Turk using three different evaluation approaches.
 \begin{itemize}
 \item[(1)] We will measure speed and accuracy as participants complete standard search and retrieval tasks.
@@ -412,7 +432,7 @@ For this set of user studies, we will conduct a qualitative evaluation by perfor
 A typical usability testing of this nature involves techniques such as “think-aloud” exercises, documentation of users’ reported insights, and the time they took to arrive at them~\cite{charlton2001handbook,hix1993developing,lewis1982using}. Findings from this round of testing will also be used to refine the visualization designs.
 
 \paragraph{Application to Visualization Theory} 
-Our proposed work of exploring techniques for communicating uncertainty has applications beyond our problem statement. Visualizing uncertainty is a central challenge in the Information Visualization community with many applications including weather, health, and government. Evaluating and potentially developing novel visualization techniques for representing uncertainty will be a signification contrition to these application areas.  
+Our proposed work of exploring techniques for communicating uncertainty has applications beyond our problem statement. Visualizing uncertainty is a central challenge in the Information Visualization community with many applications including weather, health, business, and government. Evaluating and potentially developing novel visualization techniques for representing uncertainty will be a signification contrition to these application areas.  
 
 
 \subsubsection{Judging Success}
