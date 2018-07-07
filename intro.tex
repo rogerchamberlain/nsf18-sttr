@@ -15,7 +15,9 @@
 The Internet of Things (IoT) is ushering in an era where significant numbers of devices that perform control functions (e.g., process control,
 manufacturing, etc.) are connected via wired or wireless networks.
 BECS Technology, Inc., (BECS) is a small business that manufactures controllers for a number of markets (agriculture, aquatics, refrigeration, etc.) and seeks to maximize the benefits to its customers of the data made available by this connectivity.
-However, the current data sharing models we employ (like most companies) limits each individual organization to seeing only the data logs of control systems that it directly owns. 
+However, the current data sharing model we employ (like most companies) limits
+each individual organization to seeing only the data logs of control
+systems that it directly owns. 
 This data model significantly impedes the potential of such connectivity.
 
 The opportunities of aggregating data across organizational boundaries are substantial.
@@ -24,10 +26,10 @@ We can begin to use machine learning techniques to improve control functionality
 While these opportunities can and do provide real benefit to owners/operators of IoT-based control equipment, there are challenges related to security, privacy, and data communication that must be overcome.
 Both Kumar and Patel~\cite{kp14} and
 Vasilomanolakis et al.~\cite{vdlgw15} describe these challenges as being
-purvasive across all the IoT.
+purvasive across all of the IoT.
 %The security challenge is to prevent unauthorized access to equipment and data.
 %We have previously described our approach to controller
-%security~\cite{ccgss16,ccgss17b}, providing multiple layers of state-of-the-art
+%security~\cite{ccgss16,ccgss18}, providing multiple layers of state-of-the-art
 %security mechanisms, while at the same time supporting
 %ease-of-use on the part of the equipment owners and installers.
 
@@ -35,9 +37,9 @@ We desire that owners of IoT-based data share those data with the broader commun
 This proposal seeks to explore the feasibility of cross-organizational
 data sharing by addressing the challenge of data privacy.
 Additionally, we explore techniques for communicating this aggregated data to clients to encourage better decision-making.  Some high-profile examples~\cite{bz06,bk07} have illustrated the difficulty inherent in maintaining the privacy of individuals whose data are shared, even when anonymized.
-Differential privacy~\cite{dwork11,dr14} provides a formal framework for ensuring bounds on data leaks about individuals; however, some questions remain about its use in practical settings.
+Differential privacy~\cite{dwork11,dr14} provides a formal framework for ensuring bounds on data leaks about individuals; however, questions remain about its use in practical settings (particularly for time series data).
 
-What we propose to investigate in this SBIR project is how to transition
+What we propose to investigate in this STTR project is how to transition
 the theory of differential privacy into useful practice on IoT data, and how to communicate such aggregated data to clients.  
 Differential privacy provides strong guarantees that no incremental harm comes to an individual (or, in our case, organization) if they choose to share their private data with a common database maintained by a trusted curator. Statistical queries to that database have added noise included in query responses to preserve privacy.
 This added noise introduces uncertainty to the data, making data communication a primary challenge. 
@@ -52,7 +54,8 @@ utility is not well understood.  We will investigate this relationship empirical
 \item How do we communicate to users both the query responses and the
 inherent associated uncertainty due to differential privacy?
 \item How do we combine the use of differential privacy with alternative
-approaches~\cite{ct13}, such as $k$-anonymity~\cite{samarati01,sweeney02} and
+approaches~\cite{ct13}, such as using \emph{suppression} and
+\emph{generalization} to enable $k$-anonymity~\cite{samarati01,sweeney02} and
 $l$-diversity~\cite{mkgv07}?
 \end{itemize}
 BECS will serve as the trusted curator of the database (it is already serving

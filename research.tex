@@ -92,7 +92,7 @@ are collected automatically and the information retained in the
 cloud for easy access by the owners/operators of the equipment.
 
 The security of these controllers is
-state-of-the-art~\cite{ccgss16,ccgss17b}, with special attention given
+state-of-the-art~\cite{ccgss16,ccgss18}, with special attention given
 to ease-of-use considerations, as there is ample evidence that
 security measures that are difficult to implement are frequently
 circumvented by users~\cite{gefen2000relative,hertzum2004usable,schneier16}.
@@ -106,7 +106,7 @@ learning to take place.  This is true whether the learning is
 happening in an automated way (e.g., using modern
 machine learning techniques) or manually (using visualization tools).
 Each of these approaches will benefit from broader experiential coverage.
-Changing this current state of affairs is the specific purpose of this
+Changing this current state of affairs is the specific purpose of the
 proposed research project.
 
 \subsubsection{Privacy Theory}
@@ -123,6 +123,13 @@ A number of groups have contributed to differentially private hierarchical data
 Most relevant to our interest is the work of
 Rastogi and Nath~\cite{rn10} and
 Fan and Xiong~\cite{fx12,fx14}, who describe approaches to time series data.
+
+Recently, Uber has released an open source project that supports
+SQL queries~\cite{uber2,Near18,uber}.  This project is based in part
+on work by Johnson et al.~\cite{jns18}, called elastic sensitivity, and
+supports several additional differential privacy mechanisms.
+While it does not directly target time series data, we will
+seek to leverage this open source release in our development efforts.
 
 Differential privacy is far from the only approach to the problem.
 Others have described $k$-anonymity~\cite{samarati01,sweeney02},
@@ -325,7 +332,7 @@ The key intuition for this approach is that suppression would serve to
 reduce global sensitivity of the queries by removing organizations that are
 particularly identifiable in the dataset (e.g., those which are highly
 unusual).
-Similarly, using a coarser time series data would reduce the amount of
+Similarly, using coarser time series data would reduce the amount of
 noise necessary to make it differentially private, at the cost of utility loss
 of removing fine-grained information.
 We conjecture that the combined approaches provide us with sufficient
@@ -409,7 +416,7 @@ visualizations impact decision-making?}
 
 In this phase of the project, we will explore and evaluate methods for communicating uncertainty to non-experts.
 To identify the best techniques, we will rigorously examine existing methods. 
-These include using line ensembles (Figure ~\ref{fig:uncertainty}a), using standard error bars (Figure ~\ref{fig:uncertainty}b), using animation (Figure ~\ref{fig:uncertainty}c), as well as other techniques that leveraging visual variables (e.g., scaling the size of visual elements, using color to encode the degree of uncertainty, and using transparency or blurring). 
+These include using line ensembles (Figure ~\ref{fig:uncertainty}a), using standard error bars (Figure ~\ref{fig:uncertainty}b), using animation (Figure ~\ref{fig:uncertainty}c), as well as other techniques that leverage visual variables (e.g., scaling the size of visual elements, using color to encode the degree of uncertainty, and using transparency or blurring). 
 We plan first to test the designs with a diverse population of study participants via Amazon's Mechanical Turk. 
 Once we have some candidate visualizations, we will expand these results by testing real aggregated data with clients in their natural work environments.
 Dr. Ottley and her team have extensive experience in evaluating systems.
@@ -420,7 +427,7 @@ Our goal here is to determine the most effective visualization design for convey
 We will conduct experiments via Amazon's Mechanical Turk using three different evaluation approaches.
 \begin{itemize}
 \item[(1)] We will measure speed and accuracy as participants complete standard search and retrieval tasks.
-\item[(2)] Participants will perform decision-making tasks, and we will investigate how each visualization impact the decisions made.
+\item[(2)] Participants will perform decision-making tasks, and we will investigate how each visualization impacts the decisions made.
 \item[(3)] During our experiment, we will conduct additional post-tests using adaptations of standard questionnaires. For instance, we will use the NASA-TLX for subjective measures of workload~\cite{hart1988development}, and the System Usability Scale for measuring perceived usability~\cite{bangor2008empirical}. 
 \end{itemize}
 
@@ -456,7 +463,7 @@ in St.~Louis and has attendees who are quite knowledgeable about
 the aquatics industry from around the country (and the world).
 Finally, it is inexpensive (at least to the grant), because the full
 costs of travel, meeting hall, etc., are all covered by BECS and
-the attendees, no SBIR funds need be expended.
+the attendees, no STTR funds need be expended.
 
 As described above, during the meeting we will solicit participants
 to assist us in evaluating the most promising candidate data visualizations.
@@ -475,15 +482,15 @@ the project through periodic (e.g., biweekly) meetings that alternate
 locations (one meeting at BECS Technology's facility, and two weeks later
 another meeting on campus at Washington Univ. in St. Louis).
 
-Dr. Fan is physically remote (she is in Albany, NY), so her primary
-method of interaction will be via electronic communication.  We will
-use video-conferencing fairly extensively when face-to-face discussions
-are warranted.  In addition, the Dept.~of Computer Science and Engineering
-at Washington University in St.~Louis
-will invite Dr.~Fan to present a colloquium on campus at or very near
-the beginning of the project.  This will enable all of the parties to
-have a true face-to-face interaction without any travel expense charged
-to the grant.
+%Dr. Fan is physically remote (she is in Albany, NY), so her primary
+%method of interaction will be via electronic communication.  We will
+%use video-conferencing fairly extensively when face-to-face discussions
+%are warranted.  In addition, the Dept.~of Computer Science and Engineering
+%at Washington University in St.~Louis
+%will invite Dr.~Fan to present a colloquium on campus at or very near
+%the beginning of the project.  This will enable all of the parties to
+%have a true face-to-face interaction without any travel expense charged
+%to the grant.
 
 A formal agreement will need to be put in place between the company and
 Washington~U.; however, the two organizations have collaborated in the
@@ -492,36 +499,9 @@ The terms of that previous agreement will form the
 basis of the required new agreement, and we anticipate no difficulties
 in finalizing the agreement itself.
 
-%\begin{figure}[h!]
-%	\vspace{-0.2in}
-%	\begin{ganttchart}[
-%		x unit=0.8cm, 
-%		y unit chart=0.45cm, 
-%		y unit title=0.45cm, 
-%		hgrid, 
-%		vgrid,
-%		bar/.append style={fill=black!20}]{1}{12}
-%		\gantttitle{\footnotesize{Quarter 1}}{3}
-%		\gantttitle{\footnotesize{Quarter 2}}{3}
-%		\gantttitle{\footnotesize{Quarter 3}}{3}
-%		\gantttitle{\footnotesize{Quarter 4}}{3} \\
-%		%\gantttitle{\footnotesize{Phase 2}}{2} \\
-%		\ganttbar{\footnotesize{R1: Aggregation?}}{1}{6} \ganttnewline
-%		\ganttbar{\footnotesize{R1: Implementation? }}{1}{3}
-%		\ganttbar{}{6}{12} \ganttnewline
-%		\ganttbar{\footnotesize{R2: IRB application}}{1}{1} \ganttnewline
-%		\ganttbar{\footnotesize{R2: Design and implementation}}{1}{4} \ganttnewline
-%		\ganttbar{\footnotesize{R2: Testing and refinement}}{5}{10} \ganttnewline
-%		\ganttbar{\footnotesize{R2: Data analysis}}{10}{12} \ganttnewline
-%		\ganttbar{\footnotesize{System Integration}}{13}{14} \ganttnewline
-%		\ganttbar{\footnotesize{System Evaluation}}{13}{14}
-%	\end{ganttchart}
-%	\vspace{-0.2in}
-%\end{figure}
-
 The proposed research is suited for a twelve-month research agenda.
 The schedule is shown in Figure~\ref{fig:gantt}.
-Both research components can be independently investigated,
+The various research components can be independently investigated,
 primarily in parallel by the two organizations, coming together
 in the assessments to be performed at the sales meeting.
 
