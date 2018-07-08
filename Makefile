@@ -29,6 +29,11 @@ budget: budgetjustify.tex
 	dvips -t letter budgetjustify -o
 	ps2pdf budgetjustify.ps budgetjustify.pdf
 
+resubmit: resubmit.tex
+	latex resubmit
+	dvips -t letter resubmit -o
+	ps2pdf resubmit.ps resubmit.pdf
+
 data: data.tex
 	latex data
 	dvips -t letter data -o
