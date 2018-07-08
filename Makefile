@@ -40,4 +40,4 @@ data: data.tex
 	ps2pdf data.ps data.pdf
 
 clean:
-	/bin/rm -f *.aux prop.pdf prop.ps *.log *.dvi *.bbl *.blg facilities.ps facilities.pdf budgetjustify.ps budgetjustify.pdf data.ps data.pdf whitepaper.ps whitepaper.pdf
+	/bin/rm -f *.aux prop.pdf prop.ps *.log *.dvi *.bbl *.blg facilities.ps facilities.pdf budgetjustify.ps budgetjustify.pdf data.ps data.pdf whitepaper.ps whitepaper.pdf resubmit.ps resubmit.pdf
