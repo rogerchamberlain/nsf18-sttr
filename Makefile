@@ -34,10 +34,15 @@ resubmit: resubmit.tex
 	dvips -t letter resubmit -o
 	ps2pdf resubmit.ps resubmit.pdf
 
+human: human.tex
+	latex human
+	dvips -t letter human -o
+	ps2pdf human.ps human.pdf
+
 data: data.tex
 	latex data
 	dvips -t letter data -o
 	ps2pdf data.ps data.pdf
 
 clean:
-	/bin/rm -f *.aux prop.pdf prop.ps *.log *.dvi *.bbl *.blg facilities.ps facilities.pdf budgetjustify.ps budgetjustify.pdf data.ps data.pdf whitepaper.ps whitepaper.pdf resubmit.ps resubmit.pdf
+	/bin/rm -f *.aux prop.pdf prop.ps *.log *.dvi *.bbl *.blg facilities.ps facilities.pdf budgetjustify.ps budgetjustify.pdf data.ps data.pdf whitepaper.ps whitepaper.pdf resubmit.ps resubmit.pdf human.ps human.pdf supdocslist.ps supdocslist.pdf
