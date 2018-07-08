@@ -53,7 +53,7 @@ can examine and/or modify a multitude of parameters on the controller.
 
 \begin{figure}[t]
  \center
-\includegraphics[width=0.9\columnwidth]{console}
+\includegraphics[width=0.8\columnwidth]{console}
     \caption{Console display of controller at remote location.}
     \label{console}
 \end{figure}
@@ -71,7 +71,7 @@ controllers.
 
 \begin{figure}[t]
  \center
-\includegraphics[width=1.0\columnwidth]{graph}
+\includegraphics[width=0.9\columnwidth]{graph}
     \caption{Plot of controller data logs.}
     \label{graph}
 \end{figure}
@@ -127,9 +127,14 @@ Fan and Xiong~\cite{fx12,fx14}, who describe approaches to time series data.
 Recently, Uber has released an open source project that supports
 SQL queries~\cite{uber2,Near18,uber}.  This project is based in part
 on work by Johnson et al.~\cite{jns18}, called elastic sensitivity, and
-supports several additional differential privacy mechanisms.
-While it does not directly target time series data, we will
-seek to leverage this open source release in our development efforts.
+also supports several additional differential privacy mechanisms.
+While it does not directly target time series data,
+and it certaintly has not quantitatively assessed the tradeoffs between
+privacy budget and utility in a water chemistry context, it does
+point to an effective approach for deploying differential privacy
+in the field.  We will leverage this open source release in our
+development efforts, which will enable us to focus more on the questions
+of ``how well does this work?'' rather than ``how do we get it to work.''
 
 Differential privacy is far from the only approach to the problem.
 Others have described $k$-anonymity~\cite{samarati01,sweeney02},
@@ -456,7 +461,6 @@ further effort towards the above ultimate goal is warranted.
 Because that judgment is both a commercial and a technical judgment, we
 plan to leverage BECS's annual aquatics sales meeting (which happens in
 the fall, typically in November) to help us make that determination.
-
 The sales meeting is timely, in that it happens towards the end of
 the Phase~I schedule period.  It is also convenient, in that it is held
 in St.~Louis and has attendees who are quite knowledgeable about 
@@ -507,7 +511,7 @@ in the assessments to be performed at the sales meeting.
 
 \begin{figure}[h]
  \center
-\includegraphics[width=0.6\columnwidth]{gantt}
+\includegraphics[width=0.5\columnwidth]{gantt}
     \caption{Project schedule, one year duration.}
     \label{fig:gantt}
 \end{figure}
@@ -534,6 +538,13 @@ managment and
 financial space~\cite{Eppler09,Sarlin16}, but we are unaware of any
 work concerning privacy risk.
 \end{itemize}
+
+It is these opportunities for learning that comprise the strongest value
+proposition for our customers.  Improved water chemistry, achieved with
+greater efficiency, is the true goal of our customers, and this will benefit
+primarily from the knowledge gained by aggregating data across organizations,
+independent of whether the tranformation from data to knowledge occurs
+within BECS (who will share it with customers) or by the customers themselves.
 
 Also, during Phase~II we will investigate the applicability of techniques
 we have learned about aquatics data to other domains.  This will start with
